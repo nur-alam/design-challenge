@@ -7,7 +7,7 @@ html,body{
 
 p{
     font-family: Roboto-Regular;
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 
 h1{
@@ -50,6 +50,10 @@ h6{
  }
 
  .btn-joom:hover{
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+     -o-transform: scale(1.2);
      transform: scale(1.1);
  }
 
@@ -114,6 +118,133 @@ h6{
 .count-down-button{
     display: flex;
 }
+
+
+
+/*  count down section     */
+
+
+.cloud-1{
+    position: absolute;
+    width: 112px;
+    height: 66px;
+    right: 3%;
+    top: 3%;
+    opacity: 0;
+    background-image: url(../images/cloud-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: moveclouds-cloud-1 25s linear 0.15s infinite;
+}
+@keyframes moveclouds-cloud-1{
+    0%{
+        opacity: 0.8;
+        right: 20%;
+    }
+    100%{
+        opacity: 1;
+        right: 100%;
+    }
+}
+
+
+.cloud-2{
+    position: absolute;
+    width: 112px;
+    height: 66px;
+    right: 3%;
+    top: 13%;
+    opacity: 1;
+    background-image: url(../images/cloud-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: moveclouds-cloud-2 35s linear infinite;
+}
+
+@keyframes moveclouds-cloud-2{
+    0%{
+        opacity: 0.8;
+        right: 3%;
+    }
+    100%{
+        opacity: 1;
+        right: 100%;
+    }
+}
+
+.cloud-3{
+    position: absolute;
+    width: 112px;
+    height: 66px;
+    right: 75%;
+    top: 22%;
+    opacity: 0;
+    background-image: url(../images/cloud-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: moveclouds-cloud-3 15s linear infinite;
+}
+@keyframes moveclouds-cloud-3{
+    0%{
+        opacity: 0.8;
+        right: 75%;
+    }
+    100%{
+        opacity: 1;
+        right: 100%;
+    }
+}
+
+.cloud-4{
+    position: absolute;
+    width: 76px;
+    height: 43px;
+    right: 8%;
+    top: 31%;
+    opacity: 0;
+    background-image: url(../images/cloud-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: moveclouds-cloud-4 42s linear 15s infinite;
+}
+@keyframes moveclouds-cloud-4{
+    0%{
+        opacity: 0.9;
+        right: 20%;
+    }
+    100%{
+        opacity: 1;
+        right: 100%;
+    }
+}
+
+.cloud-5{
+    position: absolute;
+    width: 112px;
+    height: 66px;
+    right: 500px;
+    top: 40%;
+    opacity: 0;
+    background-image: url(../images/cloud-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: moveclouds-cloud-5 45s linear 20s infinite;
+}
+
+@keyframes moveclouds-cloud-5{
+    0%{
+        opacity: 0.9;
+        right: 20%;
+    }
+    100%{
+        opacity: 1;
+        right: 100%;
+    }
+}
+
+
+
+
 
 
 /* feature one */
