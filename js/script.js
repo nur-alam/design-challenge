@@ -1,9 +1,8 @@
 jQuery(document).ready(function($) {
 
 	const countdown = document.querySelector('.count-down');
-
 	// Set Launch Date (ms)
-	const launchDate = new Date('May 10, 2019 13:00:00').getTime();
+	const launchDate = new Date('May 10, 2019 10:00:00').getTime();
 	
 	// Update every second
 	const intvl = setInterval(() => {
@@ -43,7 +42,9 @@ jQuery(document).ready(function($) {
 		clearInterval(intvl);
 		// Style and output text
 		countdown.style.color = '#17a2b8';
-		countdown.innerHTML = 'Launched!';
+		countdown.innerHTML = `
+			<h3>Launched</h3>
+		`;
 	  }
 	}, 1000);
  
