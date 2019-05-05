@@ -1,3 +1,4 @@
+
 const countdown = document.querySelector('.count-down');
 // Set Launch Date (ms)
 const launchDate = new Date('May 10, 2019 10:00:00').getTime();
@@ -44,7 +45,7 @@ const intvl = setInterval(() => {
 		<h3>Launched</h3>
 	`;
   }
-}, 1000);
+}, 1000); 
 
 jQuery(document).ready(function($) {
  
