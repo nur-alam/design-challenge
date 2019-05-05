@@ -1,29 +1,21 @@
 
 const countdown = document.querySelector('.count-down');
-// Set Launch Date (ms)
 const launchDate = new Date('May 10, 2019 10:00:00').getTime();
 
-// Update every second
 const intvl = setInterval(() => {
-  // Get todays date and time (ms)
-  const now = new Date().getTime();
+	
+	const now = new Date().getTime();
+	const distance = launchDate - now;
 
-  // Distance from now and the launch date (ms)
-  const distance = launchDate - now;
+	const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	const hours = days*24 + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Time calculation
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = days*24 + Math.floor(
-	(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display result
-  countdown.innerHTML = `
-	  <div class="hours">
-		  <p>${hours}</p>
-		  <span>Hours</span>
+	countdown.innerHTML = `
+		<div class="hours">
+			<p>${hours}</p>
+			<span>Hours</span>
 	</div>
 	<div class="minutes">
 		<p>${mins}</p>
@@ -33,18 +25,16 @@ const intvl = setInterval(() => {
 		<p>${seconds}</p>
 		<span>Seconds</span>
 	</div>
-  `;
-
-  // If launch date is reached
-  if (distance < 0) {
-	// Stop countdown
-	clearInterval(intvl);
-	// Style and output text
-	countdown.style.color = '#17a2b8';
-	countdown.innerHTML = `
-		<h3>Launched</h3>
 	`;
-  }
+
+	if (distance < 0) {
+		clearInterval(intvl);
+		countdown.style.color = '#17a2b8';
+		countdown.innerHTML = `
+			<h3>Launched</h3>
+		`;
+	}
+
 }, 1000); 
 
 jQuery(document).ready(function($) {
