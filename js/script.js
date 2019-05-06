@@ -16,15 +16,15 @@ const intvl = setInterval(() => {
 		<div class="hours">
 			<p>${hours}</p>
 			<span>Hours</span>
-	</div>
-	<div class="minutes">
-		<p>${mins}</p>
-		<span>Minutes</span>
-	</div>
-	<div class="seconds">
-		<p>${seconds}</p>
-		<span>Seconds</span>
-	</div>
+		</div>
+		<div class="minutes">
+			<p>${mins}</p>
+			<span>Minutes</span>
+		</div>
+		<div class="seconds">
+			<p>${seconds}</p>
+			<span>Seconds</span>
+		</div>
 	`;
 
 	if (distance < 0) {
@@ -38,6 +38,8 @@ const intvl = setInterval(() => {
 }, 1000); 
 
 jQuery(document).ready(function($) {
+
+	new WOW().init();
  
 	$('.slider-active').owlCarousel({
 		items: 3,
