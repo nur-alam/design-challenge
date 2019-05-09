@@ -1,8 +1,8 @@
 
 const countdown = document.querySelector('.count-down');
-const launchDate = new Date('May 10, 2019 10:00:00').getTime();
+const launchDate = new Date('May 15, 2019 10:00:00').getTime();
 
-const intvl = setInterval(() => {
+setInterval(() => {
 	
 	const now = new Date().getTime();
 	const distance = launchDate - now;
