@@ -1,6 +1,6 @@
 
 const countdown = document.querySelector('.count-down');
-const launchDate = new Date('May 15, 2019 10:00:00').getTime();
+const launchDate = new Date('May 30, 2019 10:00:00').getTime();
 
 setInterval(() => {
 	
